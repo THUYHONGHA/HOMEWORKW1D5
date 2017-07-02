@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+  </head>
+  <body>    
+    <table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>City</th>
+    <th>Zip code</th>
+    <th>Latitude</th>
+    <th>Longtitude</th>
+    <th>Website</th>
+  </tr>
+  
+  <tr>
+      <% for(let i = 0; i<users.length; i++) {%>
+    <td><%= users[i].id %></td>
+    <td><%= users[i].name %></td>
+    <td><%= users[i].username %></td>
+    <td><%= users[i].email %></td>
+    <td><%= users[i].address.city %></td>
+    <td><%= users[i].address.zipcode %></td>
+    <td><%= users[i].address.geo.lat %></td>
+    <td><%= users[i].address.geo.lng %></td>
+    <td><%= users[i].website %></td>    
+  </tr>  
+    <%}%>
+    </table>
+  </body>
+</html>
